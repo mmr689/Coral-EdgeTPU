@@ -38,7 +38,7 @@ Comprobamos la versión de Python instalada, `python --version`.
 Python 3.11.2
 ```
 
-Una vez está a punto, he creado un acarpeta de trabajo, un entorno virtual y he instalado la librerías necesarias para poder ejecutar el modelo de los tutoriales de Coral. Cómo los modelos se crearon con Tensorflow 1 y Numpy 1, debemos instalar una versión de Numpy inferior a la 2 (a pesar de estar desfasado).
+Una vez está a punto, he creado una carpeta de trabajo, un entorno virtual y he instalado la librerías necesarias para poder ejecutar el modelo de los tutoriales de Coral. Cómo los modelos se crearon con Tensorflow 1 y Numpy 1, debemos instalar una versión de Numpy inferior a la 2 (a pesar de estar desfasado).
 
 Además, para poder trabajar con imágenes he añadido la librería de OpenCV.
 
