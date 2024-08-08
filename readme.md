@@ -1,3 +1,5 @@
+![Banner](assets/banner_copia.png)
+
 **Disclaimer: Este README no está acabado y por ahora es una guía para entenderla yo.**
 
 # Raspberry Pi + USB EdgeTPU
