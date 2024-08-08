@@ -128,9 +128,9 @@ Todo lo anterior se ha testeado con los siguientes modelos.
 <table>
    <tr>
       <th></th>
-      <th>ssd_mobilenet_v1_coco_quant_postprocess_edgetpu</th>
-      <th>ssd_mobilenet_v2_coco_quant_postprocess_edgetpu</th>
-      <th>ssdlite_mobiledet_coco_qat_postprocess_edgetpu</th>
+      <th>ssd-mblnet-v1*</th>
+      <th>ssd-mblnet-v2*</th>
+      <th>ssd-mbldet</th>
    </tr>
    <tr>
       <th>Tensoflow Version</th>
@@ -181,3 +181,7 @@ Todo lo anterior se ha testeado con los siguientes modelos.
       <th>Sí</th>
    </tr>
 </table>
+
+- *ssd-mblnet-v1: ssd_mobilenet_v1_coco_quant_postprocess_edgetpu
+- *ssd-mblnet-v2: ssd_mobilenet_v2_coco_quant_postprocess_edgetpu
+- *ssd-mbldet: ssdlite_mobiledet_coco_qat_postprocess_edgetpu
