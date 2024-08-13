@@ -3,9 +3,9 @@ import cv2
 import numpy as np
 
 # Rutas a los archivos necesarios
-img_path = '/home/pi/coral-RPi/assets/cat.jpg'  # Ruta a la imagen de entrada
-model_path = '/home/pi/coral-RPi/models/ssd_mobilenet_v1_coco_quant_postprocess_edgetpu.tflite'  # Ruta al modelo de TensorFlow Lite
-labels_path = '/home/pi/coral-RPi/models/coco_labels.txt'  # Ruta al archivo de etiquetas
+img_path = '/home/pi/Coral_EdgeTPU-RPi/assets/ffn-test.jpg'  # Ruta a la imagen de entrada
+model_path = '/home/pi/Coral_EdgeTPU-RPi/models/ffn-test-ssd-mbl-v1.tflite'  # Ruta al modelo de TensorFlow Lite
+labels_path = '/home/pi/Coral_EdgeTPU-RPi/models/ffn_labels.txt'  # Ruta al archivo de etiquetas
 
 # Cargar las etiquetas desde el archivo
 with open(labels_path, 'r') as file:
