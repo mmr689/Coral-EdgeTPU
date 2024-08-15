@@ -1,4 +1,4 @@
-![Banner](assets/banner_copia.png)
+![Banner](assets/banner.png)
 
 **Disclaimer: Este README no está acabado y por ahora es una guía para entenderla yo.**
 
