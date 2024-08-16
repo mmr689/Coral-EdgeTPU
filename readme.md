@@ -28,7 +28,7 @@ Linux raspberrypi 6.6.31+rpt-rpi-v8 #1 SMP PREEMPT Debian 1:6.6.31-1+rpt1 (2024-
 El primer paso a sido actualizar la SBC.
 
 ```bash
-sudo apt install update
+sudo apt update
 sudo apt full-upgrade
 ```
 
