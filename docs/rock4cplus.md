@@ -18,7 +18,7 @@ SUPPORT_URL="https://www.debian.org/support"
 BUG_REPORT_URL="https://bugs.debian.org/"
 ```
 
-tambien comprobamos la versión del Kernel, `uname -a`,
+también comprobamos la versión del Kernel, `uname -a`,
 
 ```bash
 Linux rock-4c-plus 5.10.110-20-rockchip #e0ac49d1b SMP Tue Sep 26 08:20:36 UTC 2023 aarch64 GNU/Linux
@@ -30,7 +30,7 @@ Conocemos la versión de python instalada `python --version`
 Python 3.9.2
 ```
 
-### Actualizamos SO e instalamos dependencias
+## Actualizamos SO e instalamos dependencias
 
 ```bash
 sudo apt update
@@ -52,7 +52,7 @@ sudo apt install libgl1-mesa-glx # Necesario para emplear Opencv
 
 Efectivamente hasta aquí ya funciona las inferencias con modelos `.tflite` sin emplear el USB de Coral.
 
-### Instalar USB EdgeTPU
+## Instalar USB EdgeTPU
 
 Los pasos son similares a la Raspberry Pi, seguimos teniendo un sistema `arm64` pero en este caso el SO de Debian es el Bullseye. Por lo tanto:
 
