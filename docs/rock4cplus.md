@@ -39,7 +39,7 @@ sudo apt full-upgrade
 sudo apt install git
 sudo apt install python3-venv
 
-git clone https://github.com/mmr689/Coral_EdgeTPU-RPi.git
+git clone https://github.com/mmr689/Coral_EdgeTPU.git
 
 python3 -m venv .venv
 source .venv/bin/activate
