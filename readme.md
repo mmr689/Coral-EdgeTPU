@@ -51,7 +51,7 @@ source .venv/bin/activate
 
 pip install tflite-runtime==2.14.0
 pip install numpy==1.26.4
-opencv-python==4.10.0.82
+pip install opencv-python==4.10.0.82
 sudo apt install libgl1-mesa-glx # Necesario para emplear Opencv
 ```
 
