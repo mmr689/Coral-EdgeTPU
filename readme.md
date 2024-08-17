@@ -89,7 +89,7 @@ Para emplear el USB Acelerador en tu Raspberry Pi que utiliza una arquitectura A
 
 3. **Actualiza la lista de paquetes:**
    ```
-   sudo apt-get update
+   sudo apt update
    ```
 
 4. **Descarga e instala el paquete específico para ARM64 desde el repositorio no oficial que encontraste:**
