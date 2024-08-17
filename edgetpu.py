@@ -3,9 +3,9 @@ import cv2
 import numpy as np
 
 # Rutas a los archivos necesarios
-img_path = '/home/pi/Coral_EdgeTPU-RPi/assets/squamata_41.jpg'  # Ruta a la imagen de entrada
-model_path = '/home/pi/Coral_EdgeTPU-RPi/models/squamata_edgetpu.tflite'  # Ruta al modelo de TensorFlow Lite
-labels_path = '/home/pi/Coral_EdgeTPU-RPi/models/squamata_labels.txt'  # Ruta al archivo de etiquetas
+img_path = 'assets/squamata_41.jpg'  # Ruta a la imagen de entrada
+model_path = 'models/squamata_edgetpu.tflite'  # Ruta al modelo de TensorFlow Lite
+labels_path = 'models/squamata_labels.txt'  # Ruta al archivo de etiquetas
 
 # Cargar las etiquetas desde el archivo
 with open(labels_path, 'r') as file:
