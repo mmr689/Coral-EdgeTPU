@@ -40,8 +40,11 @@ Una vez está a punto, he creado una carpeta de trabajo, un entorno virtual y he
 Además, para poder trabajar con imágenes he añadido la librería de OpenCV.
 
 ```bash
-mkdir Coral_EdgeTPU-RPi
-cd Coral_EdgeTPU-RPi/
+sudo apt install git
+sudo apt install python3-venv
+sudo apt install python3-pip
+
+git clone https://github.com/mmr689/Coral_EdgeTPU.git
 
 python3 -m venv .venv
 source .venv/bin/activate
