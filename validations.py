@@ -1,3 +1,5 @@
+"""
+Proceso de evaluación de una foto"""
 import cv2
 
 from detection_module import load_labels, load_model, preprocess_image, run_inference, get_predictions
@@ -5,7 +7,7 @@ from iou_evaluator import evaluate_predictions
 from xml_processor import load_and_extract_bboxes
 
 # Rutas a los archivos necesarios
-ind = 5
+ind = 7
 xml_path = f'squamata-dataset/annotations/xmls/squamata_{ind}.xml' # Ruta al xml de la imagen de entrada
 img_path = f'squamata-dataset/images/squamata_{ind}.jpg' # Ruta a la imagen de entrada
 model_path = 'models/squamata_edgetpu.tflite'
@@ -28,10 +30,10 @@ print('---')
 
 
 # Evaluar predicciones
-valid_predictions, false_positives, false_negatives = evaluate_predictions(predictions, ground_truth)
+true_positives, false_positives, false_negatives = evaluate_predictions(predictions, ground_truth)
 
 # Imprimir resultados
-print("Valid Predictions:", valid_predictions)
+print("Valid Predictions:", true_positives)
 print("False Positives:", false_positives)
 print("False Negatives:", false_negatives)
 
