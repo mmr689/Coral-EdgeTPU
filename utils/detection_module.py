@@ -7,8 +7,11 @@ def load_labels(labels_path):
         labels = [line.strip() for line in file.readlines()]
     return labels
 
-def load_model(model_path):
-    model = Interpreter(model_path, experimental_delegates=[load_delegate('libedgetpu.so.1', {'device': 'usb'})])
+def load_model(model_path, edgetpu=False):
+    if edgetpu == True:
+        model = Interpreter(model_path, experimental_delegates=[load_delegate('libedgetpu.so.1', {'device': 'usb'})])
+    else:
+        model = Interpreter(model_path)
     model.allocate_tensors()
     return model
 

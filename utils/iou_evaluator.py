@@ -1,4 +1,5 @@
 # iou_evaluator.py
+from collections import Counter
 
 def bbox_iou(box1, box2):
     """Calcula el Intersection over Union (IoU) de dos bounding boxes."""
@@ -25,8 +26,10 @@ def bbox_iou(box1, box2):
 
 def evaluate_predictions(predictions, ground_truth, iou_threshold=0.5):
     """Evalúa predicciones contra el ground truth utilizando el umbral de IoU."""
-    valid_predictions = []
+    true_positives = []
+    true_redundat_positives = []
     matched_truths = []
+    all_matched_truths = []
     false_positives = []
 
     for pred in predictions:
@@ -34,13 +37,18 @@ def evaluate_predictions(predictions, ground_truth, iou_threshold=0.5):
         for truth in ground_truth:
             iou = bbox_iou(pred, truth)
             if iou >= iou_threshold:
-                valid_predictions.append((pred, iou))
+                if truth in matched_truths:
+                    true_redundat_positives.append((pred, iou))
+                else:
+                    true_positives.append((pred, iou))
                 matched_truths.append(truth)
+                all_matched_truths.append([truth, pred, iou])
                 match_found = True
                 break
         if not match_found:
             false_positives.append((pred, iou))
-    
+
+
     false_negatives = [truth for truth in ground_truth if truth not in matched_truths]
     
-    return valid_predictions, false_positives, false_negatives
+    return true_positives, true_redundat_positives, false_positives, false_negatives
