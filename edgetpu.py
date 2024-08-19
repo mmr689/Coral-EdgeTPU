@@ -1,3 +1,7 @@
+"""
+Esto es el código más sencillo de un proceso de inferencia con TFLITE y EDGETPU
+"""
+
 from tflite_runtime.interpreter import Interpreter, load_delegate
 import cv2
 import numpy as np
