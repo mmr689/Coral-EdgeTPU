@@ -32,7 +32,7 @@ def main_processing(state):
     state.current_marker = "-"
 
     test_paths = 'squamata-dataset/annotations/test short.txt'
-    model_path = 'models/squamata_edgetpu.tflite'
+    model_path = 'models/squamata.tflite'
     labels_path = 'models/squamata_labels.txt'
 
     # Obtenemos los archivos de text en test.txt
@@ -43,7 +43,7 @@ def main_processing(state):
     # Carga de modelo
     labels = load_labels(labels_path)
     state.current_marker = "load_model"
-    model = load_model(model_path, edgetpu=True)
+    model = load_model(model_path, edgetpu=False)
     state.current_marker = "-"
     
     for name in names:
@@ -70,4 +70,4 @@ if __name__ == "__main__":
 
     # Convertir los registros a DataFrame y guardar en CSV
     df = pd.DataFrame(state.records, columns=['Timestamp', 'Marker', 'CPU_Usage', 'Memory_Usage'])
-    df.to_csv("results/data/results.csv", index=False)
+    df.to_csv("results/data/results_resources.csv", index=False)
